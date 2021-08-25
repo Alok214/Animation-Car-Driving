@@ -1,0 +1,61 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+    overflow-y:hidden ;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url("Saved Pictures/v4.jpg"); 
+}
+.city-outer{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow-x: hidden; 
+    /* background: linear-gradient(-360deg,rgb(223, 144, 144),rgb(54, 191, 209)); */
+}
+.city-outer:before{
+    width: 120px;
+    height:120px; border-radius: 50%; position: absolute; left: 0; right: 0;
+    margin: 0 auto; top: 3em; content: ''; background: radial-gradient(rgb(233, 79, 7),rgb(243, 247, 7));
+}
+.cloud{
+    background: url("Saved Pictures/c1.png"); height: 160px;
+    background-repeat: repeat-x; margin-top: 3em; animation: cloudanimation 9s linear infinite;
+}
+.city-inner{
+    background: url("Saved Pictures/g6.jpg"); 
+    position: absolute;
+    bottom:0%;
+    width:1000vw; height:30vh; 
+    background-repeat: repeat-x;
+    animation: cityanimation 5s linear infinite;
+}
+.car{
+    position: absolute; bottom: 7%; left: 15%;
+animation: caranimation 1s linear infinite;
+}
+@keyframes cloudanimation{
+    100%{
+        transform: translateX(1200px);
+        opacity: 0.4;
+    }
+}
+@keyframes cityanimation{
+    100%{
+        transform: translateX(-2500px);
+        
+    }
+}
+@keyframes caranimation{
+    100%{
+        transform: translateY(-2px);     
+    }
+    50%{
+        transform: translateY(1px);     
+    }
+    100%{
+        transform: translateY(-2px);     
+    }
+}
